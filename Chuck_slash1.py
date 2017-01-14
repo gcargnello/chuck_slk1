@@ -8,7 +8,7 @@ https://medium.com/slack-developer-blog/slash-commands-style-guide-4e91272aa43a#
 '''
 
 # import your app object
-from flask import request, jsonify, abort, Flask
+from flask import request, jsonify, abort, flask
 
 # The parameters included in a slash command request (with example values):
 #   token=gIkuvaNzQIHg97ATvDxqgjtO
@@ -24,8 +24,8 @@ from flask import request, jsonify, abort, Flask
 
 app = Flask(__name__)
 
-#@app.route('/slash-command-url', methods=['POST'])
-@app.route('', methods=['POST'])
+@app.route('/slash-command-url', methods=['POST'])
+#app.route('', methods=['POST'])
 def slash_command():
     """Parse the command parameters, validate them, and respond.
     Note: This URL must support HTTPS and serve a valid SSL certificate.
