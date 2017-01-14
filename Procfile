@@ -1,1 +1,1 @@
-web: python Chuck_slash1.py run server
+web: gunicorn Chuck_slash1:app
